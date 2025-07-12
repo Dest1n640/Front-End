@@ -1,0 +1,11 @@
+body{
+    display: block;
+    margin: 8px;
+}
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid black;
+}

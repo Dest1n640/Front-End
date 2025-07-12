@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Формы2</title>
+        <meta charset="utf-8">
+        <link href=".\HomeworkForm\HomeworkForm2.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <form>
+            <h1><b>Что вы думаете об обучении в университете?</b></h1>
+            <table>
+                <th><td>
+            <form action="#" method="get">
+                    <label for="name" class="fattext">Введите вашу ФИО</label>
+                    <input type="text" id="name" required placeholder="Введите ФИО" class="begin">
+                    <label for="email" class="fattext">Введите свою почту</label>
+                    <input type="email" id="email" required placeholder="Введите свою почту" class="begin">
+                    <label for="phone" class="fattext">Введите свой номер телефона</label>
+                    <input type="tel" id="phone" required placeholder="+7" class="begin">
+                    
+                    <fieldset>
+                        <label class="fattext"><b>1.Как вы оцениваете качество образование?</b></label>
+                        <label for="answer1">
+                            <input type="radio" name="question1" id="answer1">Отлично
+                        </label>
+                        <label for="answer2">
+                            <input type="radio" name="question1" id="answer2">Хорошо
+                        </label>
+                        <label for="answer3">
+                            <input type="radio" name="question1" id="answer3">Удовлетворительно
+                        </label>
+                        <label for="answer4">
+                            <input type="radio" name="question1" id="answer4">Неувдовлетворительно
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label class="fattext"><b>2. Насколько, по вашему мнению, учебная программа соответствует современным требованиям?</b></label>
+                        <label for="answer5">
+                            <input type="radio" name="question2" id="answer5">Польностью соответствует
+                        </label>
+                        <label for="answer6">
+                            <input type="radio" name="question2" id="answer6">В основном соответствует, но есть устаревшие моменты
+                        </label>
+                        <label for="answer7">
+                            <input type="radio" name="question2" id="answer7">Программа нуждается в серьёзном обновлении
+                        </label>
+                        <label for="answer8">
+                            <input type="radio" name="question2" id="answer8">Программа совершенно не соответствует современным требованиям
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label class="fattext"><b>3. Насколько вы довольны работой преподавательского состава?</b></label>
+                        <label for="answer9">
+                            <input type="radio" name="question3" id="answer9">Полностью доволен/довольна
+                        </label>
+                        <label for="answer10">
+                            <input type="radio" name="question3" id="answer10">Скорее доволен/довольна
+                        </label>
+                        <label for="answer11">
+                            <input type="radio" name="question3" id="answer11">Скорее недоволен/недовольна
+                        </label>
+                        <label for="answer12">
+                            <input type="radio" name="question3" id="answer12">Полностью недоволен/недовольна
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label class="fattext"><b>4. Достаточно ли у вас практических занятий для закрепления теоретических знаний</b></label>
+                        <label for="answer13">
+                            <input type="radio" name="question4" id="answer13">Более чем достаточно
+                        </label>
+                        <label for="answer14">
+                            <input type="radio" name="question4" id="answer14">Достаточно
+                        </label>
+                        <label for="answer15">
+                            <input type="radio" name="question4" id="answer15">Недостаточно
+                        </label>
+                        <label for="answer16">
+                            <input type="radio" name="question4" id="answer16">Практические занятия отсутствуют
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label class="fattext"><b>5. Насколько полезны материалы, предоставляемые преподавателями (учебники, презентации, конспекты)?</b></label>
+                        <label for="answer17" >
+                            <input type="radio" name="question5" id="answer17">Очень полезны
+                        </label>
+                        <label for="answer18">
+                            <input type="radio" name="question5" id="answer18">Полезны, но требуют дополнения
+                        </label>
+                        <label for="answer19">
+                            <input type="radio" name="question5" id="answer19">Слабо полезны, часто не хватает деталей
+                        </label>
+                        <label for="answer20">
+                            <input type="radio" name="question5" id="answer20">Совсем не полезны, приходится искать другие источники
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label></label>
+                    </fieldset>
+                    <fieldset>
+                        <label class="fattext"><b>6. Как вы оцениваете внешний вид корпуса</b></label>
+                        <label for="range">
+                            1<input type="range" min="1" max="5" id="range" class="range">5
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label class="fattext"><b>Напишите свой отзыв об опросе</b></label>
+                        <textarea name="comments" rows="4" cols="50" placeholder="Введите комментарий" required></textarea>
+                    </fieldset>
+                    <input type="submit" value="Зарегистрироваться" class="sent">
+                    <input type="reset" value="Сбросить" class="sent">
+        
+
+                </td></th>
+            </table>
+            
+        </form>
+    </body>
+</html>

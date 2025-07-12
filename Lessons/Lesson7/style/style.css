@@ -1,0 +1,38 @@
+body{
+    background-color: bisque;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 24pt;
+    color: black;
+}
+.flex-container{
+    display: flex;
+    border: 5px solid black;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 90%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.element{
+    margin: 10px;
+
+}
+img{
+    width: 400px;
+    height: 300px;
+}
+.dog1{
+    background-image: url("../Image/photo1.jpeg");
+    
+}
+.dog2{
+    background-image: url("../Image/photo2.jpg");
+    order: 4;
+}
+.dog3{
+    background-image: url("../Image/photo3.jpg");
+    
+}
+
+
+

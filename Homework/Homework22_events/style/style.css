@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20pt;
+}
+
+.container {
+  margin-left: 700px;
+  margin-top: 200px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 400px;
+  height: 400px;
+}
+
+.nested-list,
+.nested-list ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.nested-list li {
+  cursor: pointer;
+  position: relative;
+}
+
+.nested-list ul {
+  display: none;
+}
+
+.nested-list li.expanded > ul {
+  display: block;
+}
+
+.nested-list li::before {
+  content: "▶";
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.nested-list li.expanded::before {
+  content: "▼";
+  transform: rotate(90deg);
+}
+

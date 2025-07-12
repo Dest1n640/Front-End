@@ -1,0 +1,50 @@
+body{
+    background-color: lavender;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16pt;
+    color: black;
+
+}
+
+table{
+    border: solid black;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: silver;
+    margin: auto auto;
+    width: 80%;
+    
+}
+
+td,th{
+    border: solid black;
+    border-collapse: collapse;
+    padding: 10pt;
+}
+
+img{
+    width: 250pt;
+    height: 200pt;
+    margin: auto auto;
+}
+.ha{
+    margin: 100pt 100pt;
+}
+
+
+
+figcaption {
+    background-color: black;
+    color: white;
+    font: italic smaller sans-serif;
+    padding: 5px;
+    text-align: center;
+  }
+
+
+h1{
+    text-align: center;
+}
+
+
+

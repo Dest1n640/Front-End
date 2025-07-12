@@ -1,0 +1,33 @@
+body{
+    background-color: wheat;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:18pt ;
+    color: red;
+}
+
+table{
+    
+    border: 3px solid red;
+    margin: 350px auto;
+    border-collapse: separate;
+    border-spacing: 3px;
+
+
+}
+td{
+    border:1px solid red;
+    padding: 10px;
+}
+
+th{
+    border:2px solid red;
+    background-color: palegreen;
+}
+
+.ball{
+    text-align: center;
+}
+
+.name{
+    background-color: grey;
+}

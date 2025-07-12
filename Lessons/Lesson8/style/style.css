@@ -1,0 +1,26 @@
+body{
+    font-size: 16pt;
+    background-color: floralwhite;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.main_menu{
+    list-style: none;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}  /*ВСЁ МЕНЮ В ШАПКЕ*/
+.sub_menu{
+    border: 2px solid black;
+    padding: 7px;
+    border-radius: 10px;
+    display: none;
+    list-style: none;
+
+}/*Всплывающее меню*/
+
+.main_menu > li:hover > .sub_menu{
+    display: block;
+    position: absolute;
+}

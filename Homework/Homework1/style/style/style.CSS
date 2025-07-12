@@ -1,0 +1,11 @@
+body {
+    background-color: wheat;
+    color: black
+}
+
+hr{
+    border: none;
+    background-color: red;
+    color: red;
+    height: 3px;
+}

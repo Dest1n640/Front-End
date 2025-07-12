@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: black;
+}
+h1 {
+    color: black;
+}
+p {
+    font-size: 14px;
+    color: black;
+}
+ul.custom-list {
+    list-style: none;
+    padding: 0;
+}
+ul.custom-list li {
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+ul.custom-list li::before {
+    content: "✔ ";
+    color: green;
+    font-weight: bold;
+    margin-right: 5px;
+}

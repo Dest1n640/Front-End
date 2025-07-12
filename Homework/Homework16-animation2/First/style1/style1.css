@@ -1,0 +1,56 @@
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.ship{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    margin-top: 300px;
+    right: 0;
+    animation: Ship_left 30s forwards;
+}
+@keyframes Ship_left {
+    from {transform: translateX(0px)}
+    to {transform: translateX(-1500px)}
+}
+.sky1{
+    width: 300px;
+    height: 100px;
+    top: 0;
+    position: absolute;
+    animation: For_sky 40s forwards;
+}
+.sky2{
+    width: 300px;
+    height: 100px;
+    top: 0;
+    margin-left: 300px;
+    position: absolute;
+    animation: For_sky 40s forwards;
+}
+.sky3{
+    width: 300px;
+    height: 100px;
+    top:0;
+    margin-left: 900px; 
+    position: absolute;
+    animation: For_sky 40s forwards;
+}
+@keyframes For_sky {
+    from{transform: translateX(-1000px);}
+    to{transform: translateX(0px);}
+}
+.gull{
+    width: 200px;
+    height: 100px;
+    right: 0;
+    margin-top: 200px;
+    position: absolute;
+    animation: Gull 10s forwards;
+}
+@keyframes Gull {
+    from{transform: translateX(0px);}
+    to{transform: translateX(-1500px);}
+}

@@ -1,0 +1,72 @@
+
+.clock-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-top: 200px;
+  margin-left: 550px;
+}
+
+.clock-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gear-small,
+.gear-medium,
+.gear-large {
+  position: absolute;
+  transform-origin: center;
+}
+
+.gear-small {
+  top: 60px;
+  left: 90px;
+  width: 80px;
+  animation: rotate-gear 3s linear infinite;
+}
+
+.gear-medium {
+  top: 100px;
+  left: 130px;
+  width: 105px;
+  animation: rotate-gear 2s linear infinite;
+}
+
+.gear-large {
+  top: 110px;
+  left: 70px;
+  width: 110px;
+  animation: rotate-gear 4s linear infinite;
+}
+.pendulum {
+  position: absolute;
+  top: 210px;
+  left: 20%;
+  width: 200px;
+  transform-origin: top;
+  animation: swing-pendulum 2s ease-in-out infinite;
+}
+@keyframes rotate-gear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes swing-pendulum {
+  0% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}

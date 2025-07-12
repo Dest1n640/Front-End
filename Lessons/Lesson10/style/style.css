@@ -1,0 +1,37 @@
+body{
+    font-size: 17pt;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+div{
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: azure;
+    margin: 20px auto;
+}
+.simple-grad{
+    background-image: repeating-linear-gradient(to top, green 10%, red 35%, yellow 25%, red 10%, yellow 10%, green 10% ) /*Должно быть 100*/
+
+}
+.radiant-grad{
+    background-image: repeating-radial-gradient(circle at 70px 100px, blue 30%, pink 20%, white 50%, pink 10%);
+}
+.pattern-grad{
+    background-image: repeating-linear-gradient(pink, white, red);
+    background-size: 50px 200px;
+    background-repeat: no-repeat;
+    background-position: 30px 0px;
+}
+.complex-grad{
+    background-image: linear-gradient(45deg, transparent 75%, pink 75%),
+    linear-gradient(315deg, transparent 75%, pink 75%),
+    linear-gradient(135deg, transparent 75%, pink 75%),
+    linear-gradient(225deg, transparent 75%, pink 75%);
+    background-size: 30px 20px;
+    background-repeat: repeat;
+    background-position: 0px 0px, 0px 0px, 15px 0px,15px 0px;   
+}
+

@@ -1,0 +1,36 @@
+body{
+    background-color: wheat;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:18pt ;
+
+}
+
+table{
+    border: solid black;
+    margin: 100px auto;
+    height: 100px;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: cornsilk;
+}
+
+
+
+.white {
+    background-color: white ;
+
+}
+
+.aqua{
+    background-color: aqua;
+}
+
+.red{
+    background-color: lavender;
+}
+
+td,th{
+    border: solid black;
+    padding: 25pt 40pt;
+}

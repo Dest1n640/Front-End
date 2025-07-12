@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href=".\Homework4\Homework4.css" rel="stylesheet" type="text/css">
+        <title>Форма регистрации</title>
+    </head>
+    <body>
+        <h1>Регистрация на forlabs</h1>
+        <form action="#" method="get">
+        <label>Введите почту</label>
+        <input type="email" placeholder="Введите почту" required>
+
+        <label>Введите ФИО </label>
+        <input type="text" required placeholder="ФИО">
+
+        <label>Введите пароль</label>
+        <input type="password" required placeholder="Введите пароль">
+
+        <label for="phone">Номер телефона</label>
+        <input type="tel" id="phone" name="phone" placeholder="+7 999 999 99 99" pattern="^\+?" required>
+
+        <label>Выберите направление</label>
+        <select class="font">
+            <option>Прикладная информатика(РПО)</option>
+            <option>Прикладная информатика(дизайн)</option>
+            <option>Сервис</option>
+            <option>Реклама и связь с общественностью</option>
+            <option>Туризм</option>
+        </select>
+        
+
+        <label for="agree" class="inline politic" >Согласитесь с пол. конфиденциальности</label>
+        <input type="checkbox" required id="agree" class="inline">
+        
+        <input type="submit" value="Зарегистрироваться" class="sent">
+        <input type="reset" value="Сбросить" class="sent">
+    </table>
+
+    
+    </body>
+</html>
