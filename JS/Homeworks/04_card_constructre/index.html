@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = 'stylesheet' href="style.css">
+  <title>Card constructor</title>
+</head>
+<body>
+  <div class = "constructor">
+    <h2>Конструктор визиток</h2>
+    <form>
+      <label>Наименование организации:
+        <br>
+        <input type="text" name="organization">
+      </label>
+      <br>
+      <label>Фамилия, имя, отчество
+        <br>
+        <input type="text" name="fullName">
+      </label>
+      <div class="controls">
+        <div class="control-group">
+          <label class="align-btn"><input type="radio" name="name-align" value="left" checked>☰</label>
+          <label class="align-btn"><input type="radio" name="name-align" value="center">≡</label>
+          <label class="align-btn"><input type="radio" name="name-align" value="right">☷</label>
+        </div>
+        <div class="control-group">
+          <label class="font-btn"><input type="radio" name="name-font" value="24px" checked>24px</label>
+          <label class="font-btn"><input type="radio" name="name-font" value="26px">26px</label>
+          <label class="font-btn"><input type="radio" name="name-font" value="28px">28px</label>
+        </div>
+      </div>
+      <div class="control-group colors">
+        <label style="--color: black;"><input type="radio" name="name-color" value="black" checked></label>
+        <label style="--color: blue;"><input type="radio" name="name-color" value="blue"></label>
+        <label style="--color: red;"><input type="radio" name="name-color" value="red"></label>
+        <label style="--color: green;"><input type="radio" name="name-color" value="green"></label>
+        <label style="--color: gold;"><input type="radio" name="name-color" value="gold"></label>
+        <label style="--color: purple;"><input type="radio" name="name-color" value="purple"></label>
+      </div>
+      
+      <label>Должность
+        <br>
+        <input type = "text" name = "work">
+      </label>
+       <div class="controls">
+        <div class="control-group">
+          <label class="align-btn"><input type="radio" name="work-align" value="left" checked>☰</label>
+          <label class="align-btn"><input type="radio" name="work-align" value="center">≡</label>
+          <label class="align-btn"><input type="radio" name="work-align" value="right">☷</label>
+        </div>
+        <div class="control-group">
+          <label class="font-btn"><input type="radio" name="work-font" value="14px" checked>14px</label>
+          <label class="font-btn"><input type="radio" name="work-font" value="16px">16px</label>
+          <label class="font-btn"><input type="radio" name="work-font" value="18px">18px</label>
+        </div>
+      </div>
+      <div class="control-group colors">
+          <label style="--color: black;"><input type="radio" name="work-color" value="black" checked></label>
+          <label style="--color: darkgray;"><input type="radio" name="work-color" value="darkgray"></label>
+          <label style="--color: gray;"><input type="radio" name="work-color" value="gray"></label>
+          <label style="--color: silver;"><input type="radio" name="work-color" value="silver"></label>
+          <label style="--color: lightgray;"><input type="radio" name="work-color" value="lightgray"></label>
+          <label style="--color: gainsboro;"><input type="radio" name="work-color" value="gainsboro"></label>
+      </div>
+
+      <label>Телефон
+        <br>
+        <input type = "tel" name = "Number">
+      </label>
+      <button type="button" class="add-phone-btn">+ Добавить еще один телефон</button>
+      <br>
+      <label>E-mail
+        <br>
+        <input type = "email" name ="mail">
+      </label>
+      <label><input type="checkbox" name="show" value="yes"> Отображать</label>
+      <br>
+      <label>Адрес
+        <br>
+        <input type="text" name="address">
+      </label>
+      <label><input type="checkbox" name="show2" value="yes">Отображать</label>
+      <br><br>
+      <button type="submit" class="submit-btn">Применить</button>
+    </form>
+  </div>
+  <div class = "card">
+    
+  </div>
+</body>
+<script src = 'main.js'></script>
+</html>

@@ -1,0 +1,134 @@
+html{
+  background-color: gainsboro;
+  font-family: sans-serif;
+}
+.constructor{
+  border: 2px solid #e0e0e0;
+  background-color: white;
+  width: 500px;
+  margin-left: 200px;
+  padding-bottom: 20px;
+}
+body{
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+h2{
+  text-align: center; 
+  font-weight: normal;
+}
+
+form{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+label {
+  color: #555;
+}
+
+input[type="text"], input[type="tel"], input[type="email"]{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.control-group {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.control-group input[type="radio"] {
+  display: none;
+}
+
+.control-group .align-btn, .control-group .font-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ccc;
+  position: relative;
+}
+
+.control-group label:last-of-type {
+  border-right: none;
+}
+
+.control-group input[type="radio"]:checked + * {
+  background-color: #e0e0e0;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.control-group label > input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.colors {
+  border: none;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.colors label {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color);
+  cursor: pointer;
+  display: inline-block;
+  border: 2px solid white;
+  outline: 1px solid #ccc;
+  position: relative;
+}
+
+.colors input[type="radio"]:checked + * {
+  outline-color: black;
+  outline-width: 2px;
+}
+
+.add-phone-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.card {
+  margin-top: 40px;
+  background-color: white;
+  border: 2px solid black;
+  width: 425px;
+  height: 175px;
+}
