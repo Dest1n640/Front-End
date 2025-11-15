@@ -128,7 +128,54 @@ input[type="text"], input[type="tel"], input[type="email"]{
 .card {
   margin-top: 40px;
   background-color: white;
-  border: 2px solid black;
   width: 425px;
-  height: 175px;
+  height: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.card-organization {
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+}
+
+.card-name{
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+.card-work{
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.card-another{
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
 }
