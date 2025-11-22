@@ -1,53 +1,81 @@
 html{
-  background-color: gainsboro;
-  font-family: sans-serif;
+  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-.constructor{
-  border: 2px solid #e0e0e0;
-  background-color: white;
-  width: 500px;
-  margin-left: 200px;
-  padding-bottom: 20px;
-}
+
 body{
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  gap: 50px;
+  padding: 20px;
+  margin: 0;
 }
+
+.constructor{
+  background-color: white;
+  width: 360px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 h2{
-  text-align: center; 
-  font-weight: normal;
+  text-align: left; 
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0 0 30px 0;
+  color: #333;
 }
 
 form{
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0;
 }
 
 label {
-  color: #555;
+  color: #666;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
 }
 
 input[type="text"], input[type="tel"], input[type="email"]{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: calc(100% - 16px);
-  padding: 8px;
-  border: 1px solid #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
   border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.input-with-controls {
+  margin-bottom: 0;
+}
+
+.input-with-controls input {
+  margin-bottom: 10px;
+}
+
+.phone-input {
+  margin-bottom: 10px;
+}
+
+.phone-input:last-child {
+  margin-bottom: 20px;
 }
 
 .controls {
   display: flex;
-  gap: 10px;
-  margin: 5px 0;
+  gap: 12px;
+  margin: 10px 0 20px 0;
 }
 
 .control-group {
   display: flex;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 4px;
   overflow: hidden;
+  background-color: white;
 }
 
 .control-group input[type="radio"] {
@@ -55,20 +83,24 @@ input[type="text"], input[type="tel"], input[type="email"]{
 }
 
 .control-group .align-btn, .control-group .font-btn {
-  padding: 5px 10px;
+  padding: 8px 14px;
   cursor: pointer;
-  background-color: #f0f0f0;
-  border-right: 1px solid #ccc;
+  background-color: white;
+  border-right: 1px solid #ddd;
   position: relative;
+  font-size: 13px;
+  color: #666;
+  transition: all 0.2s;
 }
 
 .control-group label:last-of-type {
   border-right: none;
 }
 
-.control-group input[type="radio"]:checked + * {
-  background-color: #e0e0e0;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+.control-group input[type="radio"]:checked + .align-btn,
+.control-group input[type="radio"]:checked + .font-btn {
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 .control-group label > input {
@@ -81,25 +113,25 @@ input[type="text"], input[type="tel"], input[type="email"]{
 
 .colors {
   border: none;
-  gap: 8px;
-  margin: 10px 0;
+  gap: 10px;
+  margin: 10px 0 20px 0;
 }
 
 .colors label {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background-color: var(--color);
   cursor: pointer;
   display: inline-block;
-  border: 2px solid white;
-  outline: 1px solid #ccc;
+  border: 3px solid white;
+  outline: 2px solid transparent;
   position: relative;
+  transition: outline 0.2s;
 }
 
 .colors input[type="radio"]:checked + * {
-  outline-color: black;
-  outline-width: 2px;
+  outline-color: #333;
 }
 
 .add-phone-btn {
@@ -107,18 +139,32 @@ input[type="text"], input[type="tel"], input[type="email"]{
   border: none;
   color: #007bff;
   cursor: pointer;
-  padding: 5px 0;
+  padding: 0;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.add-phone-btn:hover {
+  text-decoration: underline;
+}
+
+label input[type="checkbox"] {
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 .submit-btn {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  font-weight: 500;
+  margin-top: 10px;
 }
 
 .submit-btn:hover {
@@ -126,56 +172,66 @@ input[type="text"], input[type="tel"], input[type="email"]{
 }
 
 .card {
-  margin-top: 40px;
+  margin-top: 0;
   background-color: white;
-  width: 425px;
-  height: 250px;
-  padding: 20px;
+  width: 600px;
+  height: 350px;
+  padding: 40px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card-organization {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 400;
   width: 100%;
   text-align: center;
   border: none;
   background: none;
   padding: 0;
-  margin: 0 0 8px 0;
-  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #888;
 }
 
 .card-name{
   font-size: 32px;
   font-weight: 700;
+  width: 100%;
   text-align: center;
   border: none;
   background: none;
   padding: 0;
-  margin: 0 0 8px 0;
+  margin: 0 0 12px 0;
 }
+
 .card-work{
   font-size: 18px;
   font-weight: 400;
+  width: 100%;
   text-align: center;
   border: none;
   background: none;
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 24px 0;
+  color: #666;
 }
+
 .card-another{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
+  width: 100%;
   text-align: center;
   border: none;
   background: none;
   padding: 0;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.8;
+  color: #555;
 }

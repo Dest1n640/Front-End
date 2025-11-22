@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const cardName = document.querySelector('.card-name');
   const cardWork = document.querySelector('.card-work');
   const cardAnother = document.querySelector('.card-another');
+  const phoneContainer = document.getElementById('phone-container');
+  const addPhoneBtn = document.querySelector('.add-phone-btn');
+
+  // Добавление дополнительного телефона
+  addPhoneBtn.addEventListener('click', function () {
+    const newPhoneInput = document.createElement('input');
+    newPhoneInput.type = 'tel';
+    newPhoneInput.name = 'phone[]';
+    newPhoneInput.className = 'phone-input';
+    phoneContainer.appendChild(newPhoneInput);
+  });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -12,7 +23,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const organization = form.elements['organization'].value;
     const fullName = form.elements['fullName'].value;
     const work = form.elements['work'].value;
-    const phone = form.elements['Number'] ? form.elements['Number'].value : '';
+    
+    // Получаем все телефоны
+    const phoneInputs = form.querySelectorAll('input[name="phone[]"]');
+    const phones = Array.from(phoneInputs)
+      .map(input => input.value.trim())
+      .filter(value => value !== '');
+    
     const email = form.elements['mail'] ? form.elements['mail'].value : '';
     const address = form.elements['address'] ? form.elements['address'].value : '';
 
@@ -47,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Собираем остальные данные (телефон, email, адрес)
     let anotherContent = '';
-    if (phone) {
-      anotherContent += phone;
+    if (phones.length > 0) {
+      anotherContent += phones.join('<br>');
     }
     if (showEmail && email) {
       if (anotherContent) anotherContent += '<br>';
