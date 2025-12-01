@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background_image">
+    <div class="rectangle1">
+      <div class="rectangle_top">
+        <div class="rectangle_topic">Список задач</div>
+        <div class="add_task">
+          <input type="checkbox" name="add_task" class="checkbox_add_task">
+          <label for="add_task">Добавить</label>
+        </div>
+      </div>
+      
+      <div class="task">
+        <input type="checkbox" class="task_result">
+        <div class="is_important"></div>
+        <div class="task_name">Задача 1</div>
+        <div class="change_task"></div>
+        <div class="delete_task"></div>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="card_name">
+        <h3>Карточка задачи</h3>
+      </div>
+      <label class="card_task">Задача
+        <br>
+        <input type="text" placeholder="Описание задачи" class="card_add_task">
+      </label>
+      <br>
+      <label class="card_priority">Высокий приоритет
+        <input type="checkbox" class="card_checkbox_priority">
+      </label>
+      <br>
+      <label>
+        <br>
+        <input type="button" class="card_button_save" value="Сохранить">
+      </label>
+      <label>
+        <input type="button" class="card_button_cansel" value="Отменить">
+      </label>
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
