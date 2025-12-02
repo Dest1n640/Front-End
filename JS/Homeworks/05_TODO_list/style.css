@@ -5,8 +5,8 @@ body {
 }
 
 .background_image{
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  min-height: 100vh;
   background: transparent url('img/Image 3.png') 0% 0% no-repeat;
   background-size: cover;
   display: flex;
@@ -18,7 +18,7 @@ body {
 
 .rectangle1{
   width: 570px;
-  height: 1080px;
+  min-height: 100vh;
   background: #FFFFFF;
   box-shadow: 0px 0px 6px #00000029;
   padding: 32px;
@@ -45,6 +45,11 @@ body {
   font-size: 14px;
   color: #707070;
   cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.add_task:hover{
+  opacity: 0.7;
 }
 
 .add_task_icon{
@@ -61,6 +66,7 @@ body {
   width: 20px;
   height: 20px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .custom_checkbox input {
@@ -84,16 +90,26 @@ body {
   background: transparent url('img/checkbox.png') center/contain no-repeat;
 }
 
+#tasks-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .task{
   width: 100%;
   height: 40px;
   background: #0606060A;
   display: flex;
   align-items: center;
-  padding: 0 15px;
-  gap: 15px;
-  margin-bottom: 2px;
+  padding: 0 12px;
+  gap: 12px;
   box-sizing: border-box;
+  transition: background 0.2s;
+}
+
+.task:hover{
+  background: #06060615;
 }
 
 .is_important{
@@ -102,12 +118,31 @@ body {
   background: transparent url('img/hiprio.png') center/contain no-repeat;
   cursor: pointer;
   flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.is_important:hover{
+  opacity: 0.7;
+}
+
+.is_important.hidden{
+  opacity: 0;
+  pointer-events: none;
 }
 
 .task_name{
   flex: 1;
   font-size: 14px;
   color: #707070;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task_name.completed{
+  text-decoration: line-through;
+  text-decoration-color: #FF0000;
+  opacity: 0.6;
 }
 
 .change_task{
@@ -116,6 +151,11 @@ body {
   background: transparent url('img/pencil.png') center/contain no-repeat;
   cursor: pointer;
   flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.change_task:hover{
+  opacity: 0.7;
 }
 
 .delete_task{
@@ -124,6 +164,11 @@ body {
   background: transparent url('img/trashbin.png') center/contain no-repeat;
   cursor: pointer;
   flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.delete_task:hover{
+  opacity: 0.7;
 }
 
 .card{
@@ -165,11 +210,11 @@ body {
 
 .card_add_task{
   width: 100%;
-  height: 24px;
+  height: 32px;
   background: #FFFFFF;
   border: 1px solid #AAAAAABF;
   border-radius: 2px;
-  padding: 4px 8px;
+  padding: 6px 8px;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -178,6 +223,11 @@ body {
 .card_add_task::placeholder{
   color: #707070;
   opacity: 0.6;
+}
+
+.card_add_task:focus{
+  outline: none;
+  border-color: #3F88E8;
 }
 
 .card_priority{
@@ -189,7 +239,6 @@ body {
   cursor: pointer;
 }
 
-/* Кастомный чекбокс для приоритета */
 .custom_checkbox_priority {
   position: relative;
   display: inline-block;
@@ -215,10 +264,11 @@ body {
   height: 17px;
   background: #707070;
   border-radius: 2px;
+  transition: background 0.2s;
 }
 
 .custom_checkbox_priority input:checked ~ .checkmark_priority {
-  background: #707070 url('img/checkbox.png') center/contain no-repeat;
+  background: transparent url('img/checkbox.png') center/12px no-repeat;
 }
 
 .priority_text{
@@ -235,7 +285,7 @@ body {
 .card_buttons{
   display: flex;
   gap: 15px;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .card_button_save{
@@ -249,13 +299,14 @@ body {
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
   font-weight: 500;
+  transition: background 0.2s;
 }
 
 .card_button_save:hover{
   background: #2E6BC4;
 }
 
-.card_button_cansel{
+.card_button_cancel{
   width: 120px;
   height: 32px;
   background: #FFFFFF;
@@ -266,8 +317,9 @@ body {
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
   font-weight: 500;
+  transition: all 0.2s;
 }
 
-.card_button_cansel:hover{
+.card_button_cancel:hover{
   background: #F5F5F5;
 }

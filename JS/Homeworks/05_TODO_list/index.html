@@ -17,20 +17,21 @@
         </div>
       </div>
       
-      <div class="task">
-        <label class="custom_checkbox">
-          <input type="checkbox" class="task_result">
-          <span class="checkmark"></span>
-        </label>
-        <div class="is_important"></div>
-        <div class="task_name">Задача 1</div>
-        <div class="change_task"></div>
-        <div class="delete_task"></div>
+      <div id="tasks-container">
+        <div class="task task-template" style="display: none;">
+          <label class="custom_checkbox">
+            <input type="checkbox" class="task_result">
+            <span class="checkmark"></span>
+          </label>
+          <div class="is_important hidden"></div>
+          <div class="task_name"></div>
+          <div class="change_task"></div>
+          <div class="delete_task"></div>
+        </div>
       </div>
     </div>
 
-
-    <div class="card">
+    <div class="card" style="display: none;">
       <div class="card_name">
         <h3>Карточка задачи</h3>
       </div>
@@ -51,12 +52,11 @@
         
         <div class="card_buttons">
           <button class="card_button_save">Сохранить</button>
-          <button class="card_button_cansel">Отменить</button>
+          <button class="card_button_cancel">Отменить</button>
         </div>
       </div>
     </div>
   </div>
-
 
   <script src="main.js"></script>
 </body>
